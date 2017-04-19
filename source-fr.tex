@@ -1,0 +1,174 @@
+% Good tuto for moderncv available here: http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
+
+% Calling the package moderncv
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+\usepackage[T1]{fontenc}
+\usepackage[default]{raleway}
+
+% modercv configuration
+\moderncvtheme[blue]{classic}
+
+% Set date column width
+\setlength{\hintscolumnwidth}{3cm}
+
+% Accented characters
+\usepackage[utf8]{inputenc}
+
+% Use of package geometry that allows for margin control
+\usepackage[top=0.9cm, bottom=0.9cm, left=1.0cm, right=1.0cm]{geometry}
+%\usepackage[scale=1]{geometry}
+
+% Image inclusion
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+
+% Column width (for dates)
+\setlength{\hintscolumnwidth}{2.5cm}
+
+% Headers part
+\firstname{\textcolor{black}{Cyril}}
+\familyname{\textcolor{black}{Thomas}}
+%\title{\textcolor{black}{Analyste Qualité Logicielle}}
+\address{\tikzmark{start}\textcolor{black}{101 bis boulevard Jean Jaurès}}{\textcolor{black}{92100 Boulogne-Billancourt}}
+\email{ketouem@gmail.com}
+\mobile{(+33) 6 07 22 91 88}
+\extrainfo{\textcolor{black}{29 ans - Titulaire du permis B} \\ \\
+           \includegraphics[scale=0.50]{./images/linkedin.png} \url{http://goo.gl/CZ2gIC}\\
+           \includegraphics[scale=0.50]{./images/github.png} \url{http://goo.gl/HmYaEp}\\
+           \includegraphics[scale=0.50]{./images/stackoverflow.png} \url{http://goo.gl/5I6niN}\tikzmark{end}}
+          
+
+\begin{document}
+
+% Putting a backcolor in the header
+\begin{tikzpicture}[remember picture,overlay]
+\fill[blue!10]
+  (current page.north west) rectangle ([yshift=-1cm]current page.east|-{pic cs:end});
+\end{tikzpicture}
+
+% Include an image inside the section, redifining section in order to include an additional parameter
+\makeatletter
+\RenewDocumentCommand{\section}{smo}{%
+  \par\addvspace{2.5ex}%
+  \phantomsection{}% reset the anchor for hyperrefs
+  \addcontentsline{toc}{section}{#2}%
+  \parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}  {\color{color1}\rule{\hintscolumnwidth}{0.95ex}}}%
+  \hspace{\separatorcolumnwidth}%
+    \IfNoValueTF{#3}
+    {\parbox[t]{\maincolumnwidth}{\strut\sectionstyle{#2}}}
+    {\parbox[t]{\maincolumnwidth}{\strut#3\ \sectionstyle{#2}}}%
+  \par\nobreak\addvspace{1ex}\@afterheading%
+}
+\makeatother
+
+%
+\makecvtitle
+
+% Professional stuff
+\section{Expériences Professionnelles}[\includegraphics[scale=0.40]{./images/worker.png}]
+% WayzUp
+\cventry{Depuis Octobre 2016}{Software Developer}{WayzUp}{Paris}{France}{%
+\begin{itemize}
+    \item Création d'un dashboard (Sinatra) affichant le résultat des builds Circle CI.
+    \item Maintien et évolutions fullstack des applicatifs (Sinatra, Rails).
+    \item Création d'un outil basé sur docker (machine \& compose) permettant le montage de dumps de bases de données de production sur un environnement de développement. 
+\end{itemize}
+}
+% tinyclues
+\cventry{Mars 2016 - Septembre 2016}{Software Engineer}{tinyclues}{Paris}{France}{%
+\begin{itemize}
+    \item Création d'un webservice Flask permettant le tracking d'évènements (clicks, page views, etc.)
+    \item Participation à l'évolution d'une stack de data science
+    \item Mise en place d'environnements de développement utilisant Docker \& docker-compose
+    \item Améliorations et optimisations du traitement de flux de données entrant via PyTables \& HDF
+\end{itemize}
+}
+% Optfilows
+\cventry{Septembre 2014 - Février 2016}{Software Developer \& Architect}{Optiflows}{Boulogne-Billancourt}{France}{%
+\begin{itemize}
+    \item Création d'applications et de web services sous Flask \& Django
+    \item Maintien et évolution d'applications Python \& Go
+    \item Participation à l'élaboration d'une architecture multi-agents basée sur Docker
+    \item Configuration de builds de CI sous Jenkins/CircleCI
+\end{itemize}
+}
+% Maisons du Monde
+\cventry{Juin 2014 - Aout 2014}{Ingénieur Qualité \& Process}{Maisons du Monde (E-Commerce)}{Paris}{France}{%
+\begin{itemize}
+    \item Déploiement et configuration d'applications en PHP.
+    \item Automatisation de tests fonctionnels via Cucumber (implémentation des steps en Ruby).
+    \item Tests fonctionnels et d'intégration.
+\end{itemize}
+}
+% SmartFocus
+\cventry{Novembre 2011 - Juin 2014}{Analyste Qualité Logicielle}{SmartFocus}{Clichy la Garenne}{France}{%
+\begin{itemize}
+	\item Développement d'un framework Python pour l'automatisation des tests fonctionnels basé sur Selenium Webdriver.
+	\item Développement d'outils internes permettant de faciliter les tests (Python/Flask/SQLAlchemy \& Java/GWT).
+	\item Intégration des outils de tests automatiques dans une chaîne de build via Jenkins.
+	\item Utilisation (Gatling, locust, loadUI) et développement d'outils permettant les tests de charge.
+	\item Rédaction et exécution des plans de tests (fonctionnels et de charge).
+	\item Création et suivi des rapports d'incidents sur Jira.
+\end{itemize}
+}
+% Groupe Mutualiste RATP
+\cventry{Juin - Août 2009 \& 2010}{Développeur}{Groupe Mutualiste RATP}{Paris}{France}{%
+\begin{itemize}
+	\item Développement d'outils de backoffice (gestion de stock, mailing clients) en Delphi (Object Pascal) avec un stockage des données dans une base PostgreSQL.
+\end{itemize}
+}
+
+% Education stuff
+\section{Diplômes et Études}[\includegraphics[scale=0.40]{./images/diploma.png}]
+\cventry{2010-2011}{MSc in Computing Science - HETAC (H1)}{Griffith College}{Dublin}{Irlande}{%
+\begin{itemize}
+	\item Mémoire: "\textit{Relevance of glyph recognition and augmented reality in desktop applications with AForge.NET and GRATF.}" (Disponible sur: \url{http://goo.gl/iyzQsX})
+\end{itemize}
+}
+\cventry{2008-2011}{Expert en Informatique et Système d'Information (Niveau I - Ingénieur)}{EPSI Paris}{Levallois-Perret}{France}{}
+
+% Skillz - Python
+\section{Développement Python}[\includegraphics[scale=0.40]{./images/python.png}]
+\cvitem{Database}{SQLAlchemy, cx\_Oracle, PyMongo}
+\cvitem{Web}{Flask (Flask-Restful), aiohttp, Bottle, Django}
+\cvitem{Test}{Nose, Mock, Selenium-Webdriver, Locust}
+\cvitem{Comp. Vision}{OpenCV, PIL}
+\cvitem{HTTP}{Requests}
+\cvitem{Tasking}{Celery, asyncio}
+
+% Skillz - General
+\section{Compétences Générales}[\includegraphics[scale=0.40]{./images/google-code.png}]
+\cvitem{Langages}{Python (intermédiaire-avancé), Ruby (débutant), Go (débutant), Java (intermédiare), C\# (intermédiaire), Haskell (débutant), Javascript (débutant)}
+\cvitem{CI}{Jenkins, CircleCI}
+\cvitem{Infrastructure}{Docker, docker-compose, docker-machine}
+\cvitem{SCM}{Git, SVN}
+\cvitem{SGBD}{Oracle 10g, PostgreSQL, MySQL, MongoDB}
+\cvitem{OS}{Linux (Debian/Ubuntu), macOS}
+\cvitem{Gestion}{Jira, TestLink}
+\cvitem{Fonctionnel}{Selenium Webdriver, soapUI, TestComplete}
+\cvitem{Charge}{loadUI, locust, Gatling}
+
+% Languages
+\begin{minipage}[t]{0.5\textwidth}
+\section{Langues}[\includegraphics[scale=0.40]{./images/talk.png}]
+\cvlanguage{Anglais}{lu, écrit, parlé}{}
+\cvlanguage{Français}{langue maternelle}{}
+\end{minipage}
+% Certifications
+\begin{minipage}[t]{0.5\textwidth}
+\section{Certifications}[\includegraphics[scale=0.40]{./images/certification.png}]
+\cvitem{TOEIC}{Score: 975}
+\cvitem{ISTQB}{Niveau \textit{foundation}}
+\end{minipage}
+
+% Hobbies
+\begin{minipage}[t]{0.5\textwidth}
+\section{Hobbies}
+\cvitem{Course à pied}{10 kms, semi-marathon (1h28) }
+\end{minipage}
+
+\end{document}
