@@ -17,7 +17,6 @@
 
 % Use of package geometry that allows for margin control
 \usepackage[top=0.9cm, bottom=0.9cm, left=1.0cm, right=1.0cm]{geometry}
-%\usepackage[scale=1]{geometry}
 
 % Image inclusion
 \usepackage{graphicx}
@@ -27,7 +26,7 @@
 
 
 % Column width (for dates)
-\setlength{\hintscolumnwidth}{2.5cm}
+\setlength{\hintscolumnwidth}{3cm}
 
 % Headers part
 \firstname{\textcolor{black}{Cyril}}
@@ -68,89 +67,123 @@
 %
 \makecvtitle
 
+\bigbreak
+
 % Professional stuff
 \section{Expériences Professionnelles}[\includegraphics[scale=0.40]{./images/worker.png}]
 % WayzUp
 \cventry{Depuis Octobre 2016}{Software Developer}{WayzUp}{Paris}{France}{%
 \begin{itemize}
-    \item Création d'un dashboard (Sinatra) affichant le résultat des builds Circle CI.
-    \item Maintien et évolutions fullstack des applicatifs (Sinatra, Rails).
-    \item Création d'un outil basé sur docker (machine \& compose) permettant le montage de dumps de bases de données de production sur un environnement de développement. 
+    \item Création d'un dashboard \textbf{Sinatra}, hébergé sur \textbf{Heroku}, affichant le résultat des builds \textbf{CircleCI}
+    \item Mise en place d'un outil basé sur \textbf{docker} (\textbf{machine} \& \textbf{compose}) permettant le montage et stockage sur \textbf{S3} de dumps de bases de données de production sur un environnement de développement
+    \item Configuration de distributions \textbf{Cloudfront} pour la distribution d'assets
+    \item Gestion et suivi des incidents de production via \textbf{Bugsnag}
+    \item Développement d'une couche CRM backoffice et intégration à l'interface \textbf{ActiveAdmin} existante
+    \item Correction des failles de sécurité à l'aide de \textbf{Gemnasium}
+    \item Maintien et évolutions fullstack des applicatifs (\textbf{Sinatra}, \textbf{Rails})
 \end{itemize}
 }
-% tinyclues
-\cventry{Mars 2016 - Septembre 2016}{Software Engineer}{tinyclues}{Paris}{France}{%
+\bigbreak
+% Tinyclues
+\cventry{Mars 2016 - Septembre 2016}{Software Engineer}{Tinyclues}{Paris}{France}{%
 \begin{itemize}
-    \item Création d'un webservice Flask permettant le tracking d'évènements (clicks, page views, etc.)
+    \item Création d'un webservice \textbf{Flask} permettant le tracking d'évènements (clicks, page views, etc.)
     \item Participation à l'évolution d'une stack de data science
-    \item Mise en place d'environnements de développement utilisant Docker \& docker-compose
-    \item Améliorations et optimisations du traitement de flux de données entrant via PyTables \& HDF
+    \item Mise en place d'environnements de développement utilisant \textbf{Docker} \& \textbf{docker-compose}
+    \item Améliorations et optimisations du traitement de flux de données entrant via \textbf{PyTables}, \textbf{HDF} \& \textbf{pandas}
 \end{itemize}
 }
-% Optfilows
+\bigbreak
+% Optiflows
 \cventry{Septembre 2014 - Février 2016}{Software Developer \& Architect}{Optiflows}{Boulogne-Billancourt}{France}{%
 \begin{itemize}
-    \item Création d'applications et de web services sous Flask \& Django
-    \item Maintien et évolution d'applications Python \& Go
-    \item Participation à l'élaboration d'une architecture multi-agents basée sur Docker
-    \item Configuration de builds de CI sous Jenkins/CircleCI
+    \item Création d'applications et de web services sous \textbf{Flask} \& \textbf{Django}
+    \item Mise en place d'environnements de développement utilisant \textbf{Docker} \& \textbf{docker-compose}
+    \item Maintien et évolution d'applications \textbf{Python} \& \textbf{Go}
+    \item Participation à l'élaboration d'une architecture multi-agents basée sur \textbf{Docker} permettant le rappel de rendez-vous patients via mail \& sms
+    \item Mise en place d'un pipeline de build via \textbf{Jenkins} \& \textbf{CircleCI}
 \end{itemize}
 }
-% Maisons du Monde
-\cventry{Juin 2014 - Aout 2014}{Ingénieur Qualité \& Process}{Maisons du Monde (E-Commerce)}{Paris}{France}{%
-\begin{itemize}
-    \item Déploiement et configuration d'applications en PHP.
-    \item Automatisation de tests fonctionnels via Cucumber (implémentation des steps en Ruby).
-    \item Tests fonctionnels et d'intégration.
-\end{itemize}
-}
+\bigbreak
 % SmartFocus
 \cventry{Novembre 2011 - Juin 2014}{Analyste Qualité Logicielle}{SmartFocus}{Clichy la Garenne}{France}{%
 \begin{itemize}
-	\item Développement d'un framework Python pour l'automatisation des tests fonctionnels basé sur Selenium Webdriver.
-	\item Développement d'outils internes permettant de faciliter les tests (Python/Flask/SQLAlchemy \& Java/GWT).
-	\item Intégration des outils de tests automatiques dans une chaîne de build via Jenkins.
-	\item Utilisation (Gatling, locust, loadUI) et développement d'outils permettant les tests de charge.
-	\item Rédaction et exécution des plans de tests (fonctionnels et de charge).
-	\item Création et suivi des rapports d'incidents sur Jira.
+	\item Développement d'un framework \textbf{Python} pour l'automatisation des tests fonctionnels basé sur \textbf{Selenium Webdriver}
+	\item Développement d'outils internes permettant de faciliter les tests (\textbf{Python}/\textbf{Flask}/\textbf{SQLAlchemy} \& Java/GWT)
+	\item Intégration des outils de tests automatiques dans une chaîne de build via \textbf{Jenkins}
+	\item Utilisation (\textbf{Gatling}, \textbf{locust}, \textbf{loadUI}) et développement d'outils permettant les tests de charge
+	\item Rédaction et exécution des plans de tests (fonctionnels et de charge)
+	\item Création et suivi des rapports d'incidents sur \textbf{Jira}
 \end{itemize}
 }
+\bigbreak
 % Groupe Mutualiste RATP
-\cventry{Juin - Août 2009 \& 2010}{Développeur}{Groupe Mutualiste RATP}{Paris}{France}{%
+\cventry{Juin - Août 2009 \& 2010}{Développeur (Stagiaire)}{Groupe Mutualiste RATP}{Paris}{France}{%
 \begin{itemize}
-	\item Développement d'outils de backoffice (gestion de stock, mailing clients) en Delphi (Object Pascal) avec un stockage des données dans une base PostgreSQL.
+	\item Développement d'outils de backoffice (gestion de stock, mailing clients) en \textbf{Delphi} (Object Pascal) avec un stockage des données dans une base \textbf{PostgreSQL}
 \end{itemize}
 }
 
+\bigbreak
+
 % Education stuff
-\section{Diplômes et Études}[\includegraphics[scale=0.40]{./images/diploma.png}]
+\section{Diplômes et Études}[\includegraphics[scale=0.50]{./images/graduation-hat-and-diploma.png}]
 \cventry{2010-2011}{MSc in Computing Science - HETAC (H1)}{Griffith College}{Dublin}{Irlande}{%
 \begin{itemize}
 	\item Mémoire: "\textit{Relevance of glyph recognition and augmented reality in desktop applications with AForge.NET and GRATF.}" (Disponible sur: \url{http://goo.gl/iyzQsX})
 \end{itemize}
 }
+\bigbreak
 \cventry{2008-2011}{Expert en Informatique et Système d'Information (Niveau I - Ingénieur)}{EPSI Paris}{Levallois-Perret}{France}{}
 
-% Skillz - Python
-\section{Développement Python}[\includegraphics[scale=0.40]{./images/python.png}]
-\cvitem{Database}{SQLAlchemy, cx\_Oracle, PyMongo}
-\cvitem{Web}{Flask (Flask-Restful), aiohttp, Bottle, Django}
-\cvitem{Test}{Nose, Mock, Selenium-Webdriver, Locust}
-\cvitem{Comp. Vision}{OpenCV, PIL}
-\cvitem{HTTP}{Requests}
-\cvitem{Tasking}{Celery, asyncio}
+\newpage
 
-% Skillz - General
-\section{Compétences Générales}[\includegraphics[scale=0.40]{./images/google-code.png}]
-\cvitem{Langages}{Python (intermédiaire-avancé), Ruby (débutant), Go (débutant), Java (intermédiare), C\# (intermédiaire), Haskell (débutant), Javascript (débutant)}
+% Skills - Python
+\begin{minipage}[t]{0.5\textwidth}
+\section{Python}[\includegraphics[scale=0.40]{./images/python.png}]
+\cvitem{Web}{Flask, aiohttp, Django}
+\cvitem{Persistance}{SQLAlchemy, cx\_Oracle, PyMongo}
+\cvitem{Test}{Nose, Mock, Locust}
+\cvitem{Job processing}{Celery, asyncio}
+\cvitem{Comp. Vision}{OpenCV, PIL}
+\end{minipage}
+% Skills - Ruby
+\begin{minipage}[t]{0.5\textwidth}
+\section{Ruby}[\includegraphics[scale=0.40]{./images/ruby.png}]
+\cvitem{Web}{Rails, Sinatra}
+\cvitem{Persistance}{ActiveRecord}
+\cvitem{Test}{rspec}
+\cvitem{Job processing}{Sidekiq}
+\cvitem{Backoffice}{ActiveAdmin}
+\end{minipage}
+
+\bigbreak
+\bigbreak
+
+% Skills - Ops
+\begin{minipage}[t]{0.5\textwidth}
+\section{Ops}[\includegraphics[scale=0.40]{./images/wrench.png}]
+\cvitem{AWS}{Cloudfront, S3}
 \cvitem{CI}{Jenkins, CircleCI}
-\cvitem{Infrastructure}{Docker, docker-compose, docker-machine}
+\cvitem{PaaS}{Heroku, Google Cloud Computing}
+\cvitem{Container}{Docker (compose \& machine)}
+\cvitem{Sécurité}{Gemnasium}
+\cvitem{Gestion incidents}{Bugsnag}
+\end{minipage}
+% Skills - 
+\begin{minipage}[t]{0.5\textwidth}
+\section{Compétences Générales}[\includegraphics[scale=0.40]{./images/code.png}]
+\cvitem{Front-end}{jQuery, Bootstrap}
 \cvitem{SCM}{Git, SVN}
-\cvitem{SGBD}{Oracle 10g, PostgreSQL, MySQL, MongoDB}
+\cvitem{SGBD}{PostgreSQL, MongoDB}
 \cvitem{OS}{Linux (Debian/Ubuntu), macOS}
 \cvitem{Gestion}{Jira, TestLink}
-\cvitem{Fonctionnel}{Selenium Webdriver, soapUI, TestComplete}
-\cvitem{Charge}{loadUI, locust, Gatling}
+\cvitem{Fonctionnel}{Selenium, soapUI, TestComplete}
+\cvitem{Charge}{locust, Gatling}
+\end{minipage}
+
+\bigbreak
+\bigbreak
 
 % Languages
 \begin{minipage}[t]{0.5\textwidth}
@@ -160,15 +193,18 @@
 \end{minipage}
 % Certifications
 \begin{minipage}[t]{0.5\textwidth}
-\section{Certifications}[\includegraphics[scale=0.40]{./images/certification.png}]
+\section{Certifications}[\includegraphics[scale=0.40]{./images/document.png}]
 \cvitem{TOEIC}{Score: 975}
 \cvitem{ISTQB}{Niveau \textit{foundation}}
 \end{minipage}
 
+\bigbreak
+\bigbreak
+
 % Hobbies
 \begin{minipage}[t]{0.5\textwidth}
-\section{Hobbies}
-\cvitem{Course à pied}{10 kms, semi-marathon (1h28) }
+\section{Hobbies}[\includegraphics[scale=0.40]{./images/running-man.png}]
+\cvitem{Course à pied}{10 kms \& semi-marathon (1h28) }
 \end{minipage}
 
 \end{document}
