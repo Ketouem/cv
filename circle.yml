@@ -1,0 +1,15 @@
+machine:
+  services:
+    - docker
+
+general:
+  artifacts:
+    - "./dist"
+
+compile:
+  override:
+    - make build
+
+test:
+  override:
+    - test -s dist/cv.pdf
