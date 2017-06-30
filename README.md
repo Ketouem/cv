@@ -1,5 +1,8 @@
 # cv
-My very own Latex-based resume ¯\\_(ツ)_/¯
+
+[![CircleCI](https://circleci.com/gh/Ketouem/cv/tree/master.svg?style=svg)](https://circleci.com/gh/Ketouem/cv/tree/master)
+
+My very own Latex-based resume ¯\\_(ツ)_/¯, pdf version available [here](https://public-dist.s3.amazonaws.com/cv.pdf).
 
 ## Build
 
