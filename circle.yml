@@ -13,3 +13,9 @@ compile:
 test:
   override:
     - test -s dist/cv.pdf
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 cp --acl public-read ./dist/cv.pdf s3://public-dist/cv.pdf
