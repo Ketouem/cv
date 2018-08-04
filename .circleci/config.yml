@@ -1,0 +1,43 @@
+version: 2.0
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Compile pdf
+          command: rm -fr dist/* && make build
+      - run:
+          name: Assert file creation
+          command: test -s dist/cv.pdf
+      - store_artifacts:
+          path: dist
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+  deploy:
+    docker:
+      - image: jess/awscli
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Push file to bucket
+          command: aws s3 cp --acl public-read /tmp/workspace/dist/cv.pdf s3://public-dist/cv.pdf
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          context: aws
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
