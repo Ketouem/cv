@@ -9,6 +9,13 @@
 % modercv configuration
 \moderncvtheme[blue]{classic}
 
+% link styling
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=cyan
+}
+
 % Set date column width
 \setlength{\hintscolumnwidth}{3cm}
 
@@ -31,17 +38,14 @@
 % Headers part
 \firstname{\textcolor{black}{Cyril}}
 \familyname{\textcolor{black}{Thomas}}
-\address{\tikzmark{start}\textcolor{black}{101 bis boulevard Jean Jaurès}}{\textcolor{black}{92100 Boulogne-Billancourt}}
+\address{\textcolor{black}{Boulogne-Billancourt - France}}
 \email{ketouem@gmail.com}
 \homepage{ketouem.com}
-\mobile{(+33) 6 07 22 91 88}
 \extrainfo{\textcolor{black}{31 ans - Titulaire du permis B} \\ \\
-           \includegraphics[scale=0.50]{./images/linkedin.png} \url{https://goo.gl/0q4mqd}\\
-           \includegraphics[scale=0.50]{./images/github.png} \url{https://goo.gl/HmYaEp}\\
-           \includegraphics[scale=0.50]{./images/stackoverflow.png} \url{https://goo.gl/5I6niN}\\
-           \includegraphics[scale=0.50]{./images/codewars.png}
-           \url{https://goo.gl/HW9dKv}\tikzmark{end}}
-
+           \href{https://goo.gl/0q4mqd}{\includegraphics[scale=0.50]{./images/linkedin.png}}
+           \href{https://goo.gl/HmYaEp}{\includegraphics[scale=0.50]{./images/github.png}}
+           \href{https://goo.gl/5I6niN}{\includegraphics[scale=0.50]{./images/stackoverflow.png}}
+           \href{https://goo.gl/HW9dKv}{\includegraphics[scale=0.50]{./images/codewars.png}}\tikzmark{end}}
 
 \begin{document}
 \hypersetup{pdftitle={Cyril THOMAS - CV}}
@@ -142,7 +146,7 @@
 \section{Diplômes et Études}[\includegraphics[scale=0.50]{./images/graduation-hat-and-diploma.png}]
 \cventry{2010-2011}{MSc in Computing Science - HETAC (H1)}{Griffith College}{Dublin}{Irlande}{%
 \begin{itemize}
-	\item Mémoire: "\textit{Relevance of glyph recognition and augmented reality in desktop applications with AForge.NET and GRATF.}" (Disponible sur: \url{http://goo.gl/iyzQsX})
+	\item Mémoire: "\href{http://goo.gl/iyzQsX}{\textit{Relevance of glyph recognition and augmented reality in desktop applications with AForge.NET and GRATF.}}"
 \end{itemize}
 }
 \bigbreak
@@ -176,12 +180,12 @@
 % Skills - Ops
 \begin{minipage}[t]{0.5\textwidth}
 \section{Ops}[\includegraphics[scale=0.40]{./images/wrench.png}]
-\cvitem{AWS}{Cloudfront, S3, EC2, Route53}
+\cvitem{Cloud}{AWS}
 \cvitem{CI}{Jenkins, CircleCI}
 \cvitem{PaaS}{Heroku}
 \cvitem{Container}{Docker (compose \& machine)}
 \cvitem{Sécurité}{Gemnasium}
-\cvitem{Gestion incidents}{Bugsnag}
+\cvitem{Gestion incidents}{Bugsnag, Sentry}
 \cvitem{Configuration}{Ansible, Terraform}
 \end{minipage}
 % Skills -
@@ -190,7 +194,7 @@
 \cvitem{Front-end}{jQuery, Bootstrap}
 \cvitem{SCM}{Git, SVN}
 \cvitem{SGBD}{PostgreSQL, MongoDB}
-\cvitem{OS}{Linux (Debian/Ubuntu), macOS}
+\cvitem{OS}{Linux (Debian/Ubuntu), MacOS}
 \cvitem{Gestion}{Jira, TestLink}
 \cvitem{Fonctionnel}{Selenium, soapUI, TestComplete}
 \cvitem{Charge}{locust, Gatling}
@@ -208,6 +212,7 @@
 % Certifications
 \begin{minipage}[t]{0.5\textwidth}
 \section{Certifications}[\includegraphics[scale=0.40]{./images/document.png}]
+\cvitem{AWS}{\href{https://public-dist.s3.amazonaws.com/aws-certified-solutions-architect-associate-certificate.pdf}{Certified Solutions Architect Associate}}
 \cvitem{TOEIC}{Score: 975}
 \cvitem{ISTQB}{Niveau \textit{foundation}}
 \end{minipage}
@@ -218,7 +223,7 @@
 % Hobbies
 \begin{minipage}[t]{0.5\textwidth}
 \section{Hobbies}[\includegraphics[scale=0.40]{./images/running-man.png}]
-\cvitem{Course à pied}{10 kms \& semi-marathon (1h24) }
+\cvitem{Course à pied}{10 kms \& semi-marathon (\href{https://public-dist.s3.amazonaws.com/semi_2018.pdf}{1h24}) }
 \end{minipage}
 
 \end{document}
