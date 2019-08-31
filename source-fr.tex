@@ -1,20 +1,13 @@
 % Good tuto for moderncv available here: http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
 
 % Calling the package moderncv
-\documentclass[10pt,a4paper,sans]{moderncv}
+\documentclass[10pt,a4paper,sans,colorlinks,linkcolor=true]{moderncv}
 
 \usepackage[T1]{fontenc}
 \usepackage[default]{raleway}
 
 % modercv configuration
 \moderncvtheme[blue]{classic}
-
-% link styling
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    urlcolor=cyan
-}
 
 % Set date column width
 \setlength{\hintscolumnwidth}{3cm}
@@ -48,7 +41,12 @@
            \href{https://goo.gl/HW9dKv}{\includegraphics[scale=0.50]{./images/codewars.png}}\tikzmark{end}}
 
 \begin{document}
-\hypersetup{pdftitle={Cyril THOMAS - CV}}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=cyan,
+  pdftitle={Cyril THOMAS - CV},
+  pdfauthor={Cyril THOMAS}
+}
 
 % Putting a backcolor in the header
 \begin{tikzpicture}[remember picture,overlay]
