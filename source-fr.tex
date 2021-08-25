@@ -34,7 +34,7 @@
 \address{\textcolor{black}{Boulogne-Billancourt - France}}
 \email{ketouem@gmail.com}
 \homepage{ketouem.com}
-\extrainfo{\textcolor{black}{31 ans - Titulaire du permis B} \\ \\
+\extrainfo{\textcolor{black}{33 ans - Titulaire du permis B} \\ \\
            \href{https://goo.gl/0q4mqd}{\includegraphics[scale=0.50]{./images/linkedin.png}}
            \href{https://goo.gl/HmYaEp}{\includegraphics[scale=0.50]{./images/github.png}}
            \href{https://goo.gl/5I6niN}{\includegraphics[scale=0.50]{./images/stackoverflow.png}}
@@ -77,11 +77,14 @@
 % Professional stuff
 \section{Expériences Professionnelles}[\includegraphics[scale=0.40]{./images/worker.png}]
 % Enovacom
-\cventry{Depuis Juillet 2017}{Senior Software Engineer}{Enovacom}{Boulogne-Billancourt}{France}{%
+\cventry{Depuis Juillet 2017}{Senior Software Engineer / DevOps}{Enovacom}{La Défense}{France}{%
 \begin{itemize}
-    \item Création d'un pipeline \textbf{CircleCI} permettant la génération automatique d'une documentation utilisateur et leur publication sur un site dédié hébergé via \textbf{AWS S3}
-    \item Maintien et amélioration de playbooks \textbf{Ansible} permettant le provisioning et la configuration applicative pour des machines virtuelles \textbf{EC2} / \textbf{VMWare-ESX}
-    \item Mise en place de configurations \textbf{Terraform} pour AWS
+    \item Ré-architecture de la solution existante sous \textbf{AWS} avec prise en compte des contraintes de coûts/sécurité/performance/maintenabilité
+    \item Participation à l'élaboration d'une architecture basée sur \textbf{serverless} (API Gateway, Lambda, etc.)
+    \item Gestion des incidents et maintien condition opérationnelle de la charge de production
+    \item Développement de modules \textbf{Terraform/Terragrunt} pour la description de l'infrastructure
+    \item Création d'un pipeline permettant la génération automatique d'une documentation utilisateur et leur publication sur un site dédié hébergé via AWS S3
+    \item Maintien et amélioration de playbooks Ansible permettant le provisioning et la configuration applicative pour des machines virtuelles EC2 / VMWare (esx)
 \end{itemize}
 }
 \bigbreak
@@ -151,8 +154,26 @@
 \cventry{2008-2011}{Expert en Informatique et Système d'Information (Niveau I - Ingénieur)}{EPSI Paris}{Levallois-Perret}{France}{}
 
 \bigbreak
+
+% Certifications
+\section{Certifications}[\includegraphics[scale=0.50]{./images/document.png}]
+\cventry{2018}{\href{https://public-dist.s3.amazonaws.com/aws-certified-solutions-architect-associate-certificate.pdf}{Certified Solutions Architect Associate}}{Amazon Web Services}{}{}{}
+\cventry{2021}{\href{https://public-dist.s3.amazonaws.com/aws-certified-developer-associate-certificate.pdf}{Certified Developer Associate}}{Amazon Web Services}{}{}{}
+
 \bigbreak
 
+% Skills - Ops
+\begin{minipage}[t]{0.5\textwidth}
+\section{Ops}[\includegraphics[scale=0.40]{./images/wrench.png}]
+\cvitem{Cloud}{AWS}
+\cvitem{Configuration}{Ansible, Terraform, Terragrunt, Packer}
+\cvitem{Framework}{Serverless}
+\cvitem{CI}{CircleCI, Jenkins}
+\cvitem{PaaS}{Heroku}
+\cvitem{Container}{Docker (compose \& machine)}
+\cvitem{Sécurité}{Gemnasium}
+\cvitem{Gestion incidents}{Bugsnag, Sentry}
+\end{minipage}
 % Skills - Python
 \begin{minipage}[t]{0.5\textwidth}
 \section{Python}[\includegraphics[scale=0.40]{./images/python.png}]
@@ -162,6 +183,9 @@
 \cvitem{Job processing}{Celery, asyncio}
 \cvitem{Comp. Vision}{OpenCV, PIL}
 \end{minipage}
+
+\bigbreak
+
 % Skills - Ruby
 \begin{minipage}[t]{0.5\textwidth}
 \section{Ruby}[\includegraphics[scale=0.40]{./images/ruby.png}]
@@ -171,34 +195,18 @@
 \cvitem{Job processing}{Sidekiq}
 \cvitem{Backoffice}{ActiveAdmin}
 \end{minipage}
-
-\bigbreak
-\bigbreak
-
-% Skills - Ops
-\begin{minipage}[t]{0.5\textwidth}
-\section{Ops}[\includegraphics[scale=0.40]{./images/wrench.png}]
-\cvitem{Cloud}{AWS}
-\cvitem{CI}{Jenkins, CircleCI}
-\cvitem{PaaS}{Heroku}
-\cvitem{Container}{Docker (compose \& machine)}
-\cvitem{Sécurité}{Gemnasium}
-\cvitem{Gestion incidents}{Bugsnag, Sentry}
-\cvitem{Configuration}{Ansible, Terraform}
-\end{minipage}
 % Skills -
 \begin{minipage}[t]{0.5\textwidth}
 \section{Compétences Générales}[\includegraphics[scale=0.40]{./images/code.png}]
 \cvitem{Front-end}{jQuery, Bootstrap}
 \cvitem{SCM}{Git, SVN}
 \cvitem{SGBD}{PostgreSQL, MongoDB}
-\cvitem{OS}{Linux (Debian/Ubuntu), MacOS}
+\cvitem{OS}{Linux (Debian/Ubuntu), macOS}
 \cvitem{Gestion}{Jira, TestLink}
 \cvitem{Fonctionnel}{Selenium, soapUI, TestComplete}
 \cvitem{Charge}{locust, Gatling}
 \end{minipage}
 
-\bigbreak
 \bigbreak
 
 % Languages
@@ -207,18 +215,6 @@
 \cvlanguage{Anglais}{lu, écrit, parlé}{}
 \cvlanguage{Français}{langue maternelle}{}
 \end{minipage}
-% Certifications
-\begin{minipage}[t]{0.5\textwidth}
-\section{Certifications}[\includegraphics[scale=0.40]{./images/document.png}]
-\cvitem{AWS}{\href{https://public-dist.s3.amazonaws.com/aws-certified-solutions-architect-associate-certificate.pdf}{Certified Solutions Architect Associate}}
-\cvitem{AWS}{\href{https://public-dist.s3.amazonaws.com/aws-certified-developer-associate-certificate.pdf}{Certified Developer Associate}}
-\cvitem{TOEIC}{Score: 975}
-\cvitem{ISTQB}{Niveau \textit{foundation}}
-\end{minipage}
-
-\bigbreak
-\bigbreak
-
 % Hobbies
 \begin{minipage}[t]{0.5\textwidth}
 \section{Hobbies}[\includegraphics[scale=0.40]{./images/running-man.png}]
