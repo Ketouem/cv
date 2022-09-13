@@ -34,7 +34,7 @@
 \address{\textcolor{black}{Boulogne-Billancourt - France}}
 \email{ketouem@gmail.com}
 \homepage{ketouem.com}
-\extrainfo{\textcolor{black}{33 ans - Titulaire du permis B} \\ \\
+\extrainfo{\textcolor{black}{34 ans - Titulaire du permis B} \\ \\
            \href{https://goo.gl/0q4mqd}{\includegraphics[scale=0.50]{./images/linkedin.png}}
            \href{https://goo.gl/HmYaEp}{\includegraphics[scale=0.50]{./images/github.png}}
            \href{https://goo.gl/5I6niN}{\includegraphics[scale=0.50]{./images/stackoverflow.png}}
@@ -76,13 +76,26 @@
 
 % Professional stuff
 \section{Expériences Professionnelles}[\includegraphics[scale=0.40]{./images/worker.png}]
+% Viceversa
+\cventry{Depuis Mars 2022}{Senior Cloud Engineer / DevOps}{Viceversa (ex Barney)}{Paris}{France}{%
+\begin{itemize}
+    \item Accompagnement de l'équipe de développement dans le choix et l'utilisation des ressources \& services \textbf{AWS}
+    \item Restructuration du setup \textbf{AWS} en organisation multi-comptes avec gestion des droits d'accès selon les profils
+    \item Sécurisation des ressources exposées (mise en place de \textbf{Web ACLs WAF}, enclavement réseau d'instance, configuration des \textbf{VPCs})
+    \item Monitoring de la workload \textbf{Lambda} (métriques \textbf{CloudWatch} \& analyse des logs) et des instances \textbf{EC2}
+    \item Mise en place d'un projet IaC \textbf{terraform/terragrunt} afin de formaliser l'architecture cloud
+    \item Création d'un projet \textbf{CDK} (TypeScript) pour permettre un déploiement facilité des stacks de développement
+    \item Création de \textbf{GitHub actions} permettant de faciliter le workflow de l'équipe de développement
+\end{itemize}
+}
+\bigbreak
 % Enovacom
-\cventry{Depuis Juillet 2017}{Senior Software Engineer / DevOps}{Enovacom}{La Défense}{France}{%
+\cventry{Juillet 2017 - Décembre 2021}{Senior Software Engineer / DevOps}{Enovacom}{La Défense}{France}{%
 \begin{itemize}
     \item Ré-architecture de la solution existante sous \textbf{AWS} avec prise en compte des contraintes de coûts/sécurité/performance/maintenabilité
     \item Participation à l'élaboration d'une architecture basée sur \textbf{serverless} (API Gateway, Lambda, etc.)
     \item Gestion des incidents et maintien en condition opérationnelle de la charge de production
-    \item Développement de modules \textbf{Terraform/Terragrunt} pour la description de l'infrastructure
+    \item Développement de modules \textbf{terraform/terragrunt} pour la description de l'infrastructure
     \item Création d'un pipeline permettant la génération automatique d'une documentation utilisateur et leur publication sur un site dédié hébergé via AWS S3
     \item Maintien et amélioration de playbooks Ansible permettant le provisioning et la configuration applicative pour des machines virtuelles EC2 / VMWare (esx)
 \end{itemize}
@@ -141,7 +154,7 @@
 \end{itemize}
 }
 
-\newpage
+\bigbreak
 
 % Education stuff
 \section{Diplômes et Études}[\includegraphics[scale=0.50]{./images/graduation-hat-and-diploma.png}]
