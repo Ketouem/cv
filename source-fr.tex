@@ -22,7 +22,8 @@
 \usepackage{graphicx}
 
 \usepackage{tikz}
-\usetikzlibrary{tikzmark}
+\usepackage{eso-pic}
+\usepackage{xcolor}
 
 
 % Column width (for dates)
@@ -34,11 +35,11 @@
 \address{\textcolor{black}{Boulogne-Billancourt - France}}
 \email{ketouem@gmail.com}
 \homepage{ketouem.com}
-\extrainfo{\textcolor{black}{33 ans - Titulaire du permis B} \\ \\
+\extrainfo{\textcolor{black}{38 ans - Titulaire du permis B} \\ \\
            \href{https://goo.gl/0q4mqd}{\includegraphics[scale=0.50]{./images/linkedin.png}}
            \href{https://goo.gl/HmYaEp}{\includegraphics[scale=0.50]{./images/github.png}}
            \href{https://goo.gl/5I6niN}{\includegraphics[scale=0.50]{./images/stackoverflow.png}}
-           \href{https://goo.gl/HW9dKv}{\includegraphics[scale=0.50]{./images/codewars.png}}\tikzmark{end}}
+           \href{https://goo.gl/HW9dKv}{\includegraphics[scale=0.50]{./images/codewars.png}}}
 
 \begin{document}
 \hypersetup{
@@ -49,10 +50,9 @@
 }
 
 % Putting a backcolor in the header
-\begin{tikzpicture}[remember picture,overlay]
-\fill[blue!10]
-  (current page.north west) rectangle ([yshift=-1cm]current page.east|-{pic cs:end});
-\end{tikzpicture}
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{\color{blue!10}\rule[-5cm]{\paperwidth}{5cm}}%
+}
 
 % Include an image inside the section, redefining section in order to include an additional parameter
 \makeatletter
