@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[default]{raleway}
 
-% modercv configuration
+% moderncv configuration
 \moderncvtheme[blue]{classic}
 
 % Set date column width
@@ -25,9 +25,12 @@
 \usepackage{eso-pic}
 \usepackage{xcolor}
 
-
-% Column width (for dates)
-\setlength{\hintscolumnwidth}{3cm}
+% Compute age from birthdate (1987-10-10) using the build date
+\newcount\age
+\age=\year
+\advance\age by -1987
+\ifnum\month<10 \advance\age by -1 \fi
+\ifnum\month=10 \ifnum\day<10 \advance\age by -1 \fi\fi
 
 % Headers part
 \firstname{\textcolor{black}{Cyril}}
@@ -35,7 +38,7 @@
 \address{\textcolor{black}{Boulogne-Billancourt - France}}
 \email{ketouem@gmail.com}
 \homepage{ketouem.com}
-\extrainfo{\textcolor{black}{38 ans - Titulaire du permis B} \\ \\
+\extrainfo{\textcolor{black}{\the\age{} ans - Titulaire du permis B} \\ \\
            \href{https://goo.gl/0q4mqd}{\includegraphics[scale=0.50]{./images/linkedin.png}}
            \href{https://goo.gl/HmYaEp}{\includegraphics[scale=0.50]{./images/github.png}}
            \href{https://goo.gl/5I6niN}{\includegraphics[scale=0.50]{./images/stackoverflow.png}}
